@@ -1,0 +1,21 @@
+<section>
+    @for (item of cartList; track $index) {
+    <div class="card" style="width: 18rem">
+    <img [src]="item.product.image" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ item.product.name }}</h5>
+      <p class="card-text">
+        {{ item.product.price }} $
+      </p>
+      <p>სიცხარე:{{item.product.spiciness}}</p>
+          <p class="card-text">თხილიანი: {{item.product.nuts ? '✅':"❌"}}</p>
+          <p class="card-text">ვეგეტარიანული: {{item.product.Vegetarian ?  '✅':"❌"}}</p>
+          <div class="card-controls">
+            <input type="number" [(ngModel)]="item.quantity" min="1" (input)="updateBasket(item)">
+          </div>
+          <button (click)="removeItem(item.product.id)">წაშლა</button>
+    </div>
+  </div>
+
+}
+</section>

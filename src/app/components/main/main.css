@@ -1,0 +1,18 @@
+section, ul{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+ul{
+    gap: 20px;
+}
+li{
+    font-size: 20px;
+    cursor: pointer;
+}
+.active{
+    color: red;
+    background-color: black;
+}
